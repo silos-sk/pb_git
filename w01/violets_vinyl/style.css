@@ -2,7 +2,7 @@
 body {
   background-color: black;
   color: #fff;
-  font-family: "Segoe UI" Verdana, sans-serif;
+  font-family: "Segoe UI", Verdana, sans-serif;
 }
 
 h1 {
@@ -14,7 +14,7 @@ header {
   background-image: url("./img/Records.jpg");
 }
 
-h2 { 
+h2 {
   font-size: 25px;
   background-color: #ef8354;
   font-weight: bold;
