@@ -1,0 +1,50 @@
+p {
+  width: 800px;
+  color: rgb(219, 219, 219);
+}
+
+div {
+  padding: 5px;
+}
+
+/* Give me a position of Static */
+.static {
+  background-color: rgb(196, 170, 255);
+  position: static;
+}
+
+/* Give me a position of sticky and a top and left value of 0px */
+.sticky {
+  background-color: pink;
+  position: sticky;
+  top: 0px;
+  left: 0;
+}
+
+/* Give me a position of fixed and a top and left value of 300px.
+ Also give me a Z-index of 1 */
+.fixed {
+  background-color: rgb(206, 255, 206);
+  position: fixed;
+  top: 300;
+  left: 300;
+}
+
+/* Give me a position of absolute and a top value of 1400px and left value of 600px.
+ Also give me a Z-index of 2 */
+.absolute {
+  background-color: rgb(255, 208, 108);
+  position: absolute;
+  top: 1400px;
+  left: 600px;
+  z-index: 2;
+}
+
+/* Give me a position of relative and a top value of 300px.
+ Also give me a Z-index of 3 */
+.relative {
+  background-color: rgb(77, 213, 255);
+  position: relative;
+  top: 300px;
+  z-index: 3;
+}
