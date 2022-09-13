@@ -19,12 +19,12 @@ header {
     height: 510px;
 }
 
-#feature {
-    margin-left: -1px;
-}
-
 #feature img {
     width: 900px;
+}
+
+figure {
+    margin: 0;
 }
 
 .title {
