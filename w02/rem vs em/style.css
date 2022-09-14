@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    font-size: 16px;
+}
+
+div {
+    width: 25%;
+    height: 100px;
+    display: inline-block;
+    background-color: black;
+    font-size: 30px;
+}
+
+#em {
+    font-size: 2em;
+}
+
+#rem {
+    font-size: 2rem;
+}
+
+
+@media screen and (min-width: 600){
+    div {
+        background-color: orange;
+    }
+}
+
+@media screen and (min-width: 768px){
+    div {
+        background-color: yellow;
+    }
+}
+
+@media screen and (min-width: 992px){
+    div {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    div {
+        background-color: blue;
+    }
+}
+
+
