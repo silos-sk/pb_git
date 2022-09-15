@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cards-container {
+  padding: 5%;
+  
+}
+
+.card {
+  margin-bottom: 30px;
+  background-color: rgb(190, 86, 86);
+  height: 400px;
+}
+
+/*
+Media Query 1 
+1. Add a media query for screens with a minimum width of 40em.
+2.1. Inside the media query select the cards-container and add a rule so that changes it to a flexbox.
+2.2. Add another rule to cards-container so that the boxes wrap.
+2.3. Finally add a rule for justify content: space between.
+3. Inside the media query select .card and give it a width of 45% 
+so that two divs appear per row on tablet sized screens */
+@media screen and (min-width: 40em) {
+  .cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .card {
+    width: 45%;
+  }
+
+}
+/* 
+Media Query 2
+1. Add a second media query with a minimum width of 60em for desktops to display 3 cards per row. 
+2. Give the cards a width of 31% 
+*/
+
+
+ @media screen and (min-width: 60em) { 
+  .card {
+    width: 31%;
+  }
+} 
