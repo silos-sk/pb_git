@@ -102,7 +102,6 @@ main {
   }
 
 /* PORTFOLIO */
-
 .portfolio {
     display: flex;
     flex-direction: column;
@@ -148,7 +147,6 @@ main {
 }
 
 /* GET IN TOUCH */
-
 .contact {
     margin: 1.5rem 1.5rem;
 }
@@ -247,7 +245,7 @@ input:hover{
     width: 30%;
   }
 
-}
+} /* end of media min-width: 40em */
 
 @media screen and (min-width: 60em) {
     .social {
@@ -308,7 +306,7 @@ input:hover{
         margin-top: 0;
       }
 
-}
+} /* end of media min-width: 60em */
 
 @media screen and (min-width: 90em) {
     .hero-text {
@@ -325,4 +323,4 @@ input:hover{
     .avatar {
         margin-left: 13rem;
     }
-}
+} /* end of media min-width: 90em */
