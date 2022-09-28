@@ -324,6 +324,15 @@ input:hover{
     }
 
     .avatar {
-        margin-left: 13rem;
+        margin-left: 15rem;
+        margin-top: 8rem;
+    }
+
+    .avatar img {
+      width: 30%;
+    }
+
+    .hero-text button {
+      margin-right: 1rem;
     }
 } /* end of media min-width: 90em */
