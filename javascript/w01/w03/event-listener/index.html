@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Event Listener Exercises</title>
+
+  </head>
+
+  <body>
+    <main>
+      <h1>Event Listener Exercises</h1>
+
+      <section>
+        <h2>Collapsible Content:</h2>
+
+        <!-- COLLAPSIBLE CONTENT -->
+
+        <div id="dynamic">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          ab quibusdam ratione rerum sit quas dolor autem sed ducimus, quis unde
+          repellendus fugiat aut tenetur nesciunt maiores accusamus incidunt
+          inventore in id deleniti! Magni fuga eligendi, temporibus, dicta harum
+          ex sapiente, blanditiis aspernatur enim modi amet voluptate? Minima,
+          tenetur deserunt. Ad temporibus distinctio aliquid esse! Totam
+          placeat, reiciendis maxime quam, inventore at dolores dolore hic error
+          culpa temporibus tempora ducimus corporis enim maiores? Beatae veniam
+          maiores nulla debitis magni maxime.
+        </div>
+
+        <button id="dynamicBtn">Collapse Content</button>
+      </section>
+
+      <section>
+        <h2>Password Validation</h2>
+
+        <!-- PASSWORD VALIDATION-->
+        <form action="" method="">
+          <fieldset>
+            Username:
+            <input type="text" name="username" />
+            Password:
+            <input
+              type="password"
+              name="password"
+              id="password"
+              minlength="8"
+            />
+            <input type="button" name="submit" id="loginBtn" value="Log in" />
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- CURRENCY CONVERTER -->
+      <section>
+        <h2>Currency Converter: GBP to USD</h2>
+
+        <form action="" method="">
+          Enter GBP amount:
+          <input type="number" name="num" id="num" placeholder="£" />
+          <input type="button" name="submit" id="convertBtn" value="Convert" />
+        </form>
+        <div id="usd"></div>
+      </section>
+
+      <!-- LOCAL STORAGE -->
+      <section>
+        <h2>Local Storage</h2>
+      <form action="" method="" id="local">
+        First name: <input type="text" name="firstName" id="firstName" />
+        Last Name: <input type="text" name="lastName" id="lastName" />
+        Birthday: <input type="date" name="bday" id="bday" />
+        Email: <input type="email" name="email" id="email" />
+        <input type="submit" value="Submit" id="submitBtn"/>
+      </form>
+    </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
