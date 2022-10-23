@@ -171,12 +171,21 @@ main {
   border: 2px solid rgba(193, 193, 193, 0.677);
   border-radius: 1rem;
   text-align: center;
+  transition: all 1s;
 }
 
-.portfolio .card img {
-  width: 100%;
+.portfolio-img {
+  max-width: 100%;
+  width: 316px;
+  height: 210px;
+  object-fit: cover;
+  object-position: -0.5% 1%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+
+.card:hover{
+  background: linear-gradient(120deg, #fcecafef, #ffd904);
 }
 
 .card h2 {
@@ -201,6 +210,11 @@ main {
   padding: 0.8rem;
   border-radius: 2rem;
   margin-bottom: 1.5rem;
+}
+
+.p-heading{
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /* GET IN TOUCH */
@@ -305,7 +319,12 @@ input:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .card{
+    height: 100%;
   }
 
   .avatar {
@@ -364,8 +383,26 @@ input:hover {
     margin-top: -5rem;
   }
 
+  .card h2{
+    font-size: 1.3rem;
+  }
+
+  .p-heading{
+    font-size: 0.9rem;
+  }
+
+  .card {
+    font-size: 0.8rem;
+  }
+
   .portfolio {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 0.5fr);
+    gap: 0;
+  }
+
+  .portfolio-img{
+    object-fit: cover;
+    object-position: 50%;
   }
 
   .contact {
