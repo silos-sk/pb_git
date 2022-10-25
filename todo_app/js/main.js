@@ -17,53 +17,21 @@ if (completedTodos == false) {
   savedTodos.forEach(todoTemplate);
 } else if (completedTodos) {
   // If todo in completed todo, remove from todoslist
-    savedTodos.forEach((item) => {
-      for (let i = 0; i < completedTodos.length; i++) {
-        if (completedTodos.includes(item)) {
-          let index = savedTodos.indexOf(item);
-          savedTodos.splice(index, 1);
-          console.log(`savedTodos: ${savedTodos}`);
-          savedTodos.forEach(todoTemplate);
-          completedTodos.forEach(completedTodoTemplate);
-          
-        }
+  savedTodos.forEach((item) => {
+    for (let i = 0; i < completedTodos.length; i++) {
+      if (completedTodos.includes(item)) {
+        let index = savedTodos.indexOf(item);
+        savedTodos.splice(index, 1);
+        // console.log(`savedTodos: ${savedTodos}`);
+        savedTodos.forEach(todoTemplate);
+        completedTodos.forEach(completedTodoTemplate);
       }
+    }
   });
-} 
-
-count = todosEntries.children.length
+}
+// Update todos counter
+count = todosEntries.children.length;
 todosLeft.textContent = count;
-
-
-  // console.log(`savedtodos: ${savedTodos}`);
-
-  // let joinedTodos = savedTodos.concat(completedTodos); // join saved and completed todos arrays from local storage
-  // console.log(`joinedTodos: ${joinedTodos}`);
-  // console.log(completedTodos);
-  // console.log(savedTodos);
-
-  // let uniqueTodos = [...new Set(savedTodos.concat(completedTodos))]; // remove duplicates
-  // console.log(`uniqueTodos: ${uniqueTodos}`);
-
-  // Update counter to reflect loaded todos from storage
-  // count = uniqueTodos.length;
-  // todosLeft.textContent = count;
-
-
-// If todo in completed todo, remove from todoslist
-// savedTodos.forEach((item)=>{
-//   for (let i = 0; i < completedTodos.length; i++){
-//     if(completedTodos.includes(item)){
-//       let index = savedTodos.indexOf(item);
-//       savedTodos.splice(index, 1);
-//       // savedTodos.forEach(todoTemplate);
-//     }savedTodos.forEach(todoTemplate);
-//   }
-// })
-
-// Add UI elements for any saved todo
-// savedTodos.forEach(todoTemplate);
-// completedTodos.forEach(completedTodoTemplate);
 
 //*** CREATE TODO ***/
 function todoTemplate(todo) {
@@ -118,7 +86,7 @@ if (todosEntries.children) {
     if (e.target.classList.contains("del")) {
       // if it contains the delete icon
 
-      const entry = e.target.parentElement.textContent
+      const entry = e.target.parentElement.textContent;
       //Remove entry from local storage
       const localList = JSON.parse(localStorage.getItem("todos")) || []; //get item from local storage and store in this variable
       const index = localList.indexOf(
@@ -157,95 +125,58 @@ if (todosEntries.children) {
 
   //*** COMPLETE TODO ***/
   const unchecked = document.querySelectorAll(".fa-square"); // square box before the <li>
-  const checked = document.querySelectorAll(".fa-square-check")
-  const icon = document.querySelector("i");
-  console.log(`icon ${icon}`);
+
+  const checked = document.querySelectorAll(".fa-square-check");
+
   let clickCount = 0;
 
   // TO MARK TODO AS COMPLETE
-  if (unchecked){
-    unchecked.forEach((unchecked) => {
-      unchecked.addEventListener("click", function (e) {
-        e.target.classList.remove("fa-square")
-        e.target.classList.add("fa-square-check"); // toggle check icon
-        e.target.parentElement.classList.add("completed"); // add .completed css class to square box
-        e.target.nextElementSibling.classList.add("strike"); // add strike-through css style
-        e.target.parentElement.setAttribute("id", "completed")
-        clickCount++; // increase click count
+  unchecked.forEach((unchecked) => {
+    unchecked.addEventListener("click", function (e) {
+      e.target.classList.remove("fa-square");
+      e.target.classList.add("fa-square-check"); // toggle check icon
+      e.target.parentElement.classList.add("completed"); // add .completed css class to square box
+      e.target.nextElementSibling.classList.add("strike"); // add strike-through css style
+      e.target.parentElement.setAttribute("id", "completed");
+      clickCount++; // increase click count
 
-        console.log(e.target.parentElement.getAttribute("id"));
+      console.log(e.target.parentElement.getAttribute("id"));
 
-        if (e.target.parentElement.getAttribute("id") === "completed"){
-            const completedTodo = e.target.parentElement.textContent; 
+      if (e.target.parentElement.getAttribute("id") === "completed") {
+        const completedTodo = e.target.parentElement.textContent;
 
-            if(!completedList.includes(completedTodo)){
-            completedList.push(completedTodo); // add completed todo to the completedList array
-            // console.log(`Completed todo items LIST: ${completedList}`);
-              // if it is the first time to click on the square box
+        if (!completedList.includes(completedTodo)) {
+          completedList.push(completedTodo); // add completed todo to the completedList array
+          // console.log(`Completed todo items LIST: ${completedList}`);
+          // if it is the first time to click on the square box
 
-            localStorage.setItem("completedTodos", JSON.stringify(completedList)); // Add completedList to the 'completedTodos' local storage
-          }
+          localStorage.setItem("completedTodos", JSON.stringify(completedList)); // Add completedList to the 'completedTodos' local storage
         }
-
-        
-      });
+      }
     });
-  } else if (checked){
+
     checked.forEach((checked) => {
       checked.addEventListener("click", function (e) {
-        e.target.classList.remove("fa-square-check")
+        e.target.classList.remove("fa-square-check");
         e.target.classList.add("fa-square"); // toggle check icon
         e.target.parentElement.classList.remove("completed"); // add .completed css class to square box
         e.target.nextElementSibling.classList.remove("strike"); // add strike-through css style
-        e.target.parentElement.setAttribute("id", "")
+        e.target.parentElement.setAttribute("id", "");
         clickCount++; // increase click count
 
-        const todo = e.target.parentElement.textContent; 
-        let index = completedList.indexOf(todo)
+        const todo = e.target.parentElement.textContent;
+        let index = completedList.indexOf(todo);
         completedList.splice(index, 1); // add completed todo to the completedList array
         // console.log(`Completed todo items LIST: ${completedList}`);
-        
-          // if it is the first time to click on the square box
+
+        // if it is the first time to click on the square box
         localStorage.setItem("completedTodos", JSON.stringify(completedList)); // Add completedList to the 'completedTodos' local storage
-        
+
         // console.log(completedList)
-      
       });
     });
-  }
-
-  //
+  });
 }
-
-    
-    
-
-// WORKING TOGGLE DISPLAY ONLY - NO LOGIC
-//   // toggle strike-through style and checked box on completed todo :: *BUG* only works on page refresh
-//   unchecked.forEach((unchecked) => {
-//     unchecked.addEventListener("click", function (e) {
-//       e.target.classList.toggle("fa-square"); // toggle empty square icon
-//       e.target.classList.toggle("fa-square-check"); // toggle check icon
-//       e.target.parentElement.classList.toggle("completed"); // add .completed css class to square box
-      
-//       clickCount++; // increase click count
-
-     
-//         const completedTodo = e.target.parentElement.textContent; 
-  
-//         completedList.push(completedTodo); // add completed todo to the completedList array
-//         // console.log(`Completed todo items LIST: ${completedList}`);
-//         if (clickCount === 1) {
-//           // if it is the first time to click on the square box
-//           localStorage.setItem("completedTodos", JSON.stringify(completedList)); // Add completedList to the 'completedTodos' local storage
-//         }
-      
-     
-//       // console.log(completedList)
-//       e.target.nextElementSibling.classList.toggle("strike"); // add strike-through css style
-//     });
-//   });
-// }
 
 //** FOOTER **/
 const active = document.querySelector(".active");
@@ -306,6 +237,7 @@ all.addEventListener("click", function () {
 
 /* BUGS FOUND:
 1. Unable to mark todo item as complete on first add; need to refresh page
-2. Loading todo list from local storage loads duplicate complete + savedtodos
+2. Loading todo list from local storage loads duplicate complete + savedtodos -- FIXED
 3. Random times on page refresh, even though the local storage is empty, it repopulates previously erased data
+4. Unable to uncheck completed todo
 */
