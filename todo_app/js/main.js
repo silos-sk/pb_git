@@ -155,26 +155,26 @@ if (todosEntries.children) {
       }
     });
 
-    checked.forEach((checked) => {
-      checked.addEventListener("click", function (e) {
-        e.target.classList.remove("fa-square-check");
-        e.target.classList.add("fa-square"); // toggle check icon
-        e.target.parentElement.classList.remove("completed"); // add .completed css class to square box
-        e.target.nextElementSibling.classList.remove("strike"); // add strike-through css style
-        e.target.parentElement.setAttribute("id", "");
-        clickCount++; // increase click count
+    // checked.forEach((checked) => {
+    //   checked.addEventListener("click", function (e) {
+    //     e.target.classList.remove("fa-square-check");
+    //     e.target.classList.add("fa-square"); // toggle check icon
+    //     e.target.parentElement.classList.remove("completed"); // add .completed css class to square box
+    //     e.target.nextElementSibling.classList.remove("strike"); // add strike-through css style
+    //     e.target.parentElement.setAttribute("id", "");
+    //     clickCount++; // increase click count
 
-        const todo = e.target.parentElement.textContent;
-        let index = completedList.indexOf(todo);
-        completedList.splice(index, 1); // add completed todo to the completedList array
-        // console.log(`Completed todo items LIST: ${completedList}`);
+    //     const todo = e.target.parentElement.textContent;
+    //     let index = completedList.indexOf(todo);
+    //     completedList.splice(index, 1); // add completed todo to the completedList array
+    //     // console.log(`Completed todo items LIST: ${completedList}`);
 
-        // if it is the first time to click on the square box
-        localStorage.setItem("completedTodos", JSON.stringify(completedList)); // Add completedList to the 'completedTodos' local storage
+    //     // if it is the first time to click on the square box
+    //     localStorage.setItem("completedTodos", JSON.stringify(completedList)); // Add completedList to the 'completedTodos' local storage
 
-        // console.log(completedList)
-      });
-    });
+    //     // console.log(completedList)
+    //   });
+    // });
   });
 }
 
