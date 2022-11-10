@@ -66,15 +66,18 @@ function getWeather(e) {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${loc}&appid=${apiKey}`
   ).then((res) => {
-    if (res.ok) {
-      const jsonRes = res.json();
-      jsonRes.then((json) => {
+    const jsonRes = res.json();
+    jsonRes
+      .then((json) => {
         const temp = json.main.temp;
         displayData(loc, toCelsius(temp));
+      })
+      .catch(() => {
+        p.innerHTML = "<span class='warning'>!</span>Location does NOT exist";
       });
-    } else {
-      p.innerHTML = "<span class='warning'>!</span>Location does NOT exist";
-    }
+    // } else {
+    //   p.innerHTML = "<span class='warning'>!</span>Location does NOT exist";
+    // }
   });
 
   function displayData(location, data) {
@@ -93,4 +96,31 @@ function getWeather(e) {
     element.value = "";
     return element;
   }
+}
+
+// Call the api (https://imdb-api.com/en/API/Top250Movies/{APIKEY} ) using fetch method in JavaScript.​
+
+// Iterate over the first 10 movies from the response of the end point displaying their title, rating and image in a list like manner.​
+
+const apiKeyImdb = "k_q5h4dh46";
+
+fetch(`https://imdb-api.com/en/API/Top250Movies/${apiKeyImdb}`).then((res) => {
+  const jsonRes = res.json();
+  jsonRes
+    .then((json) => {
+      const movie = json.items;
+      console.log(movie);
+      for (let i = 0; i < 10; i++) {
+        displayMovie(movie[i].title, movie[i].image);
+      }
+    })
+    .catch(() => {
+      //enter code here
+      console.log("error");
+    });
+});
+
+function displayMovie(data, item1) {
+  const card = document.querySelector(".card");
+  card.innerHTML += `<h2>${data}</h2> <img src="${item1}" alt="${data}>`;
 }

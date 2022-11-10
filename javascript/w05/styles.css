@@ -1,0 +1,50 @@
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+main {
+  width: 100%;
+}
+h2 {
+  color: rgb(118, 150, 193);
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+fieldset {
+  border: 2px solid rgb(119, 128, 148);
+  border-radius: 5px;
+  width: 25%;
+  padding: 1rem;
+}
+
+#currentWeather {
+  font-size: 2rem;
+}
+
+.warning {
+  background-color: orange;
+  color: #fff;
+  border-radius: 1.5rem;
+  padding: 0.2rem 1.2rem;
+  margin: 0 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+section#movies {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  gap: 1rem;
+  margin: 0.2rem;
+}
+
+.card {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 150px;
+  text-align: center;
+}
