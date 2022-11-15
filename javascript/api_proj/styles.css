@@ -1,0 +1,69 @@
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  background-image: url("./bg.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat
+  background-size: cover;
+}
+main {
+  width: 100%;
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin: 2.5rem 0;
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 10px #120b70;
+}
+
+hr{
+  color: #000;
+}
+
+h2 {
+  color: rgb(254, 254, 254);
+  margin: 0;
+  padding: 0 0 0.2rem 0;
+}
+
+section#movies {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+  margin: 0.2rem;
+}
+
+.card {
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(2, 55, 102) 100%);
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 15rem;
+  text-align: center;
+  transition: transform 1s;
+  color:#fff;
+}
+
+.card h3{
+  display: inline;
+  font-size: 1rem;
+  color: rgb(237, 203, 5);
+}
+
+.card:hover{
+  background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(253, 227, 112) 100%);
+  transform:scale(1.05);
+  gap: 1rem;
+  
+}
+
+.card img{
+  width: 100%;
+}

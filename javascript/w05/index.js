@@ -110,6 +110,8 @@ fetch(`https://imdb-api.com/en/API/Top250Movies/${apiKeyImdb}`).then((res) => {
     .then((json) => {
       const movie = json.items;
       console.log(movie);
+      console.log(movie[0].title);
+      console.log(movie[0].image);
       for (let i = 0; i < 10; i++) {
         displayMovie(movie[i].title, movie[i].image);
       }
@@ -120,7 +122,8 @@ fetch(`https://imdb-api.com/en/API/Top250Movies/${apiKeyImdb}`).then((res) => {
     });
 });
 
-function displayMovie(data, item1) {
+function displayMovie(item1, item2) {
   const card = document.querySelector(".card");
-  card.innerHTML += `<h2>${data}</h2> <img src="${item1}" alt="${data}>`;
+  card.innerHTML += `<h2>${item1}</h2><br><img src="${item2}" alt="${item2}"><br><hr>`;
+
 }
