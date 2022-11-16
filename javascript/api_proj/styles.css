@@ -37,6 +37,7 @@ section#movies {
   width: 100%;
   gap: 1rem;
   margin: 0.2rem;
+  justify-content: center;
 }
 
 .card {
@@ -46,19 +47,19 @@ section#movies {
   padding: 1rem;
   width: 15rem;
   text-align: center;
-  transition: transform 1s;
+  transition: transform 0.5s;
   color:#fff;
 }
 
 .card h3{
   display: inline;
   font-size: 1rem;
-  color: rgb(237, 203, 5);
+  color: #edcb05;
 }
 
 .card:hover{
   background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(253, 227, 112) 100%);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, #edcb05 100%);
   transform:scale(1.05);
   gap: 1rem;
   
