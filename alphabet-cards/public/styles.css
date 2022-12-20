@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -25,39 +25,39 @@ nav a {
   margin: 0 1rem;
 }
 
-nav a:hover{
-  color:yellowgreen;
+nav a:hover {
+  color: yellowgreen;
 }
 
 h1 {
   font-size: 2.5rem;
-  margin: 1.5rem 0 3rem 0;
+  margin: 0.5rem 0 2.5rem 0;
 }
 
 .container {
   margin: 5% auto;
 }
 
-.about{
+.about {
   margin: 1rem 1rem;
 }
 
-.about ul{
+.about ul {
   text-align: left;
   line-height: 1.3rem;
   margin: 0 auto;
 }
 
-.about img{
+.about img {
   width: 200px;
   height: 200px;
   margin: 1rem 0;
   object-fit: cover;
-  box-shadow: 5px 7px 10px grey ;
+  box-shadow: 5px 7px 10px grey;
   border-radius: 10rem;
 }
 
-.about-content{
+.about-content {
   width: 60%;
   margin: 0 auto;
   line-height: 1.5rem;
@@ -69,8 +69,8 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
-
 
 .lettersBtn {
   background-color: #6bbe92;
@@ -85,46 +85,53 @@ h1 {
   font-size: 1.9rem;
 }
 
-.alpha-block, .word-block{
+.alpha-block,
+.word-block {
   background-color: rebeccapurple;
-  border:2px solid grey;
+  border: 2px solid grey;
   border-radius: 1rem;
   width: 50%;
   margin: 1rem auto;
   padding: 1rem;
 }
 
-.alpha-block h2{
-  font-size: 6rem;
+.alpha-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.word-block{
+.alpha-block h2 {
+  font-size: 8rem;
+}
+
+.word-block {
   background-color: yellowgreen;
   font-size: 3.5rem;
   width: 50%;
 }
 
-.loading{
+.loading {
   font-size: 1rem;
   margin: 2rem 0;
 }
 
-.word-block h3{
+.word-block h3 {
   margin: 2.5rem 0;
 }
-.word-img{
+.word-img {
   width: 100%;
   margin: 1rem 0;
-  box-shadow: 5px 7px 10px darkolivegreen ;
+  box-shadow: 5px 7px 10px darkolivegreen;
 }
 
-img{
+img {
   width: 200px;
   height: 250px;
   object-fit: cover;
 }
 
-.main{
+.main {
   display: flex;
   flex: 1;
   gap: 1rem;
@@ -132,6 +139,12 @@ img{
   margin: 0 1rem;
 }
 
-.main h3{
+.main h3 {
   padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .alpha-block h2 {
+    font-size: 11rem;
+  }
 }
