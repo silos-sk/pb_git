@@ -95,7 +95,7 @@ h1 {
   background-color: rebeccapurple;
   border: 2px solid grey;
   border-radius: 1rem;
-  width: 50%;
+  width: 90%;
   margin: 1rem auto;
   padding: 1rem;
 }
@@ -113,7 +113,6 @@ h1 {
 .word-block {
   background-color: yellowgreen;
   font-size: 3.5rem;
-  width: 50%;
 }
 
 .loading {
@@ -138,10 +137,11 @@ img {
 
 .main {
   display: flex;
-  flex: 1;
+  flex-direction: column;
+  flex: 1 1 auto;
   gap: 1rem;
-  padding: 0;
-  margin: 0 1rem;
+  padding: 1rem;
+  margin: 0 auto;
 }
 
 .main h3 {
@@ -162,6 +162,13 @@ img {
   .about-content {
     width: 70%;
     margin: 0 auto;
+  }
+  .main {
+    flex-direction: row;
+  }
+  .alpha-block,
+  .word-block {
+    width: 50%;
   }
 }
 
