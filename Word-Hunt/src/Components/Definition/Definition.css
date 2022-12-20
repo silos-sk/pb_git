@@ -1,0 +1,25 @@
+.meanings {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  height: 50vh;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 10px solid grey;
+}
+
+.subtitle {
+  font-size: 5vw;
+}
+
+.single-meaning {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 0;
+}

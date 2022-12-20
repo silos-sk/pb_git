@@ -1,0 +1,77 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
+  color: #fff;
+  max-width: 960px;
+  margin: 0.5rem auto;
+  background-color: #374954;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.container {
+  margin: 5% auto;
+}
+
+.lettersContainer {
+  /* margin: 1rem auto; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.lettersBtn {
+  background-color: #6bbe92;
+  border: 0;
+  border-radius: 5px;
+  width: 60px;
+  height: 50px;
+  margin: 0.1rem;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.9rem;
+}
+
+.alpha-block, .word-block{
+  font-size: 6rem;
+  background-color: rebeccapurple;
+  border:2px solid grey;
+  border-radius: 1rem;
+  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.word-block{
+  background-color: yellowgreen;
+  font-size: 4rem;
+  width: 50%;
+}
+
+.word-img{
+  height: 250px;
+  box-shadow: 5px 10px 10px grey ;
+}
+
+.main{
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  padding: 0;
+}
+
+.main h3{
+  padding: 0;
+}
