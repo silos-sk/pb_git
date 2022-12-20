@@ -1,3 +1,6 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "python.testing.pytestArgs": ["hangmangameinreact"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
 }
