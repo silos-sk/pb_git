@@ -32,10 +32,11 @@ nav a:hover {
 h1 {
   font-size: 2.5rem;
   margin: 0.5rem 0 2.5rem 0;
+  line-height: 2.5rem;
 }
 
 .container {
-  margin: 5% auto;
+  margin: 1.5rem auto;
 }
 
 .about {
@@ -144,6 +145,9 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  h1 {
+    line-height: 1.5rem;
+  }
   .alpha-block h2 {
     font-size: 11rem;
   }
