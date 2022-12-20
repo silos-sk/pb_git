@@ -43,6 +43,10 @@ h1 {
   margin: 1rem 1rem;
 }
 
+.about-title {
+  margin: 2rem;
+}
+
 .about ul {
   text-align: left;
   line-height: 1.3rem;
@@ -59,9 +63,9 @@ h1 {
 }
 
 .about-content {
-  width: 60%;
-  margin: 0 auto;
+  margin: 0 1rem;
   line-height: 1.5rem;
+  font-size: 1rem;
 }
 
 .lettersContainer {
@@ -144,11 +148,25 @@ img {
   padding: 0;
 }
 
+.sign {
+  font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     line-height: 1.5rem;
   }
   .alpha-block h2 {
     font-size: 11rem;
+  }
+  .about-content {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .about-content {
+    width: 60%;
   }
 }
