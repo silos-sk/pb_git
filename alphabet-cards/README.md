@@ -1,8 +1,7 @@
 # Animal Alphabet and Words React App
 
 A Capstone Project for PurpleBeard Front-End Web Development Bootcamp
-Completed December 2022
-Shaira Silos
+| Completed December 2022 | Shaira Silos
 
 ## Skills and Dependencies Used
 - Function Components
